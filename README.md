@@ -73,7 +73,7 @@ In the dialog box that will appear, click on ```Finish``` (leave all options to 
 
 Once you've installed the framework, just import the main header file:
 
-```objective_c
+```objective-c
 // Objective C
 #import <OneAtlas/OneAtlas.h>
 ```
@@ -84,7 +84,7 @@ import OneAtlas
 ```
 
 ## Quick Start
-```objective_c
+```objective-c
 // authenticate with your API Key on AAA realm
 [[[OneAtlas sharedInstance] authenticateService] loginWithAPIKey:@"<your_api_key>" clientID:EAAAClientID block:^(OAError * aError) {
     // check for errors and continue
@@ -169,7 +169,7 @@ The first step to accomplish before using our SDK is authenticating with our ser
 Please note that all the returns blocks in our APIs will be executed on the main thread, so you shouldn't worry about that before updating your UI.
 
 #### Objective-C
-```objective_c
+```objective-c
 [[[OneAtlas sharedInstance] authenticateService] loginWithAPIKey:@"<your_api_key>" clientID:EAAAClientID block:^(OAError * aError) {
   // check for errors and continue
 }];
@@ -191,7 +191,7 @@ This example searches for a set of OAFeature objects, using specific criterias a
 The search below is performed into the Living Library, then into your own Workspace.
 
 #### Objective-C
-```objective_c
+```objective-c
 // create a filter based on a location
 OAPoint * location = [OAPoint pointFromLatitude:43.0 longitude:3.0];
 OASearchFilter * filter = [OASearchFilter new];
@@ -262,7 +262,7 @@ OneAtlas.sharedInstance()?.dataService.getMeWith({ (aUser, aError) in
 This sample shows how to enqueue several search criterias into an OASearchFilter object.
 
 #### Objective-C
-```objective_c
+```objective-c
     // create a complex filter with multiple criterias
     OAPoint * location = [OAPoint pointFromLatitude:43.0 longitude:3.0];
     OASearchFilter * filter = [OASearchFilter new];
@@ -291,7 +291,7 @@ filter.add(EConstellationPleiades)
 This sample retrieves the OneLive template URL, which you can inject into your favorite mapping engine (provided the latter is compatible with the WMTS standard).
 
 #### Objective-C
-```objective_c
+```objective-c
 [[[OneAtlas sharedInstance] dataService] getOneLiveCapabilitiesWithBlock:^(OACapabilities * aCapabilities,
                                                                            OAError * aError) {
     if(aError) {
@@ -324,7 +324,7 @@ This sample creates a sample product with a given area, shows how to get a price
 Please note that this will decrement your credits.
 
 #### Objective-C
-```objective_c
+```objective-c
 // create a basic product order request
 OAProduct * product = [OAProduct new];
 product.ident = @"<my_feature_id>";
