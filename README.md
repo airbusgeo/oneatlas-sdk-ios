@@ -84,9 +84,11 @@ import OneAtlas
 ```
 
 ## Quick Start
+
+#### Objective-C
 ```objective-c
-// authenticate with your API Key on AAA realm
-[[[OneAtlas sharedInstance] authenticateService] loginWithAPIKey:@"<your_api_key>" clientID:EAAAClientID block:^(OAError * aError) {
+// authenticate with your API Key on IDP realm
+[[[OneAtlas sharedInstance] authenticateService] loginWithAPIKey:@"<your_api_key>" clientID:EIDPClientID block:^(OAError * aError) {
     // check for errors and continue
     if(aError) {
         // handle error
@@ -123,9 +125,10 @@ import OneAtlas
 }];
 ```
 
+#### Swift 4
 ```swift
-// authenticate with your API Key on AAA realm
-OneAtlas.sharedInstance()?.authenticateService.login(withAPIKey: "<your_api_key>", clientID: EAAAClientID, block: { (aError) in
+// authenticate with your API Key on IDP realm
+OneAtlas.sharedInstance()?.authenticateService.login(withAPIKey: "<your_api_key>", clientID: EIDPClientID, block: { (aError) in
     // check errors and continue
     if let error = aError {
         // handle error
@@ -170,7 +173,7 @@ Please note that all the returns blocks in our APIs will be executed on the main
 
 #### Objective-C
 ```objective-c
-[[[OneAtlas sharedInstance] authenticateService] loginWithAPIKey:@"<your_api_key>" clientID:EAAAClientID block:^(OAError * aError) {
+[[[OneAtlas sharedInstance] authenticateService] loginWithAPIKey:@"<your_api_key>" clientID:EIDPClientID block:^(OAError * aError) {
   // check for errors and continue
 }];
 ```
@@ -178,7 +181,7 @@ Please note that all the returns blocks in our APIs will be executed on the main
 #### Swift 4
 ```swift
 // Swift
-OneAtlas.sharedInstance()?.authenticateService.login(withAPIKey: "<your_api_key>", clientID: EAAAClientID, block: { (aError) in
+OneAtlas.sharedInstance()?.authenticateService.login(withAPIKey: "<your_api_key>", clientID: EIDPClientID, block: { (aError) in
     // check for errors and continue
 })
 ```
@@ -397,10 +400,10 @@ OneAtlas.sharedInstance()?.dataService.getProductPrice(with: opr, block: { (aPri
 
 ## Author
 
-Airbus DS / intelligence-airbus-ds-mobile@airbus.com
+Airbus DS Geo SA / intelligence-airbus-ds-mobile@airbus.com
 
 ## License
 
-Copyright ©2019 Airbus DS.
-OneAtlas SDK is available under a proprietary license. See the LICENSE file for more info.
+Copyright ©2019 Airbus DS Geo SA.
+OneAtlas SDK is available under a proprietary license. See the LICENSE.md file for more info.
 
