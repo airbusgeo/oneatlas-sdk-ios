@@ -6,7 +6,7 @@ Please visit [OneAtlas Developer Portal](https://api.oneatlas.airbus.com/mobile)
 
 ## Sample code
 
-This [GitHub repository](https://github.com/airbusgeo/oneatlas-sdk-ios-sample-code) hosts some iOS sample code that will help get you started.
+This [GitHub repository](https://github.com/airbusgeo/oneatlas-sdk-ios-sample-app) hosts some iOS sample code that will help get you started.
 
 ## Author
 
